@@ -1,1 +1,25 @@
+name: Deploy to GitHub Pages
 
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - run: npm install
+      
+      - run: npm run build
+      
+      # Add GitHub Pages deployment step
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # The folder the action should deploy (adjust if your build outputs to a different folder)
+          branch: gh-pages # The branch the action should deploy to
