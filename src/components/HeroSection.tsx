@@ -15,7 +15,7 @@ const HeroSection = () => {
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Empresa Mexicana con 23 años de experiencia brindando asesoría, soporte y productos de alta calidad que cumplen con las normas más estrictas.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 bg-transparent rounded">
               <Button asChild size="lg" className="bg-espaf-yellow hover:bg-espaf-yellow/90 text-espaf-blue-dark">
                 <Link to="/soluciones" className="flex items-center gap-2">
                   <span>Conoce Nuestras Soluciones</span>
@@ -23,7 +23,7 @@ const HeroSection = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-espaf-blue-dark">
-                <Link to="/contacto">Contáctanos</Link>
+                <Link to="/contacto" className="my-0 py-0 mx-[15px] px-[20px]">Contáctanos</Link>
               </Button>
             </div>
           </div>
