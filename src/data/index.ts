@@ -1,3 +1,4 @@
+
 // Datos para el sitio web de Espaf Internacional
 
 // Datos de Industrias
@@ -66,7 +67,7 @@ export const brands = [
   {
     id: 4,
     name: "Donaldson",
-    logo: "/lovable-uploads/c4a9c558-8ef5-43fc-9631-ab4cb27897f4.png",
+    logo: "/lovable-uploads/92e25fec-d143-4498-bda4-507a4cf2e65e.png",
     category: "Filtración y Purificación",
     description: "Sistemas de filtración industrial para líquidos y gases de alta calidad."
   },
