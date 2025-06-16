@@ -41,19 +41,27 @@ const ProductsSection = () => {
           <TabsContent value="automatization" className="animate-fade-in">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {products.automatization.map((product) => (
-                <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                <Card 
+                  key={product.id} 
+                  className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group"
+                >
                   <div className="aspect-square relative overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className="object-cover w-full h-full transition-transform hover:scale-105 duration-300"
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-espaf-blue-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <CardHeader className="p-4 pb-2">
-                    <CardTitle className="text-lg text-espaf-blue-dark">{product.name}</CardTitle>
+                    <CardTitle className="text-lg text-espaf-blue-dark group-hover:text-espaf-blue-medium transition-colors">
+                      {product.name}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
-                    <p className="text-gray-600 text-sm">{product.description}</p>
+                    <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors">
+                      {product.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
@@ -63,19 +71,27 @@ const ProductsSection = () => {
           <TabsContent value="filtration" className="animate-fade-in">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {products.filtration.map((product) => (
-                <Card key={product.id} className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all hover:-translate-y-1">
+                <Card 
+                  key={product.id} 
+                  className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer group"
+                >
                   <div className="aspect-square relative overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className="object-cover w-full h-full transition-transform hover:scale-105 duration-300"
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-espaf-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   <CardHeader className="p-4 pb-2">
-                    <CardTitle className="text-lg text-espaf-blue-dark">{product.name}</CardTitle>
+                    <CardTitle className="text-lg text-espaf-blue-dark group-hover:text-espaf-teal transition-colors">
+                      {product.name}
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 pt-0">
-                    <p className="text-gray-600 text-sm">{product.description}</p>
+                    <p className="text-gray-600 text-sm group-hover:text-gray-700 transition-colors">
+                      {product.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}

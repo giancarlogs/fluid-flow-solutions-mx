@@ -6,10 +6,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Search, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import BrandModal from "@/components/BrandModal";
 
 const Products = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<"all" | "automatization" | "filtration">("all");
+  const [selectedBrand, setSelectedBrand] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   // Filtrar marcas por categoría y búsqueda
   const filteredBrands = brands.filter(brand => {
@@ -24,6 +27,16 @@ const Products = () => {
     
     return matchesCategory && matchesSearch;
   });
+
+  const handleBrandClick = (brand: any) => {
+    setSelectedBrand(brand);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedBrand(null);
+  };
   
   useEffect(() => {
     // Scroll to top on page load
@@ -90,32 +103,43 @@ const Products = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredBrands.length > 0 ? (
               filteredBrands.map((brand) => (
-                <Card key={brand.id} className="hover:shadow-md transition-shadow overflow-hidden">
-                  <div className="bg-espaf-gray/10 p-6 flex justify-center items-center h-40 border-b border-espaf-gray/20">
+                <Card 
+                  key={brand.id} 
+                  className="hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden cursor-pointer group"
+                  onClick={() => handleBrandClick(brand)}
+                >
+                  <div className="bg-espaf-gray/10 p-6 flex justify-center items-center h-40 border-b border-espaf-gray/20 group-hover:bg-espaf-blue-dark/5 transition-colors">
                     <img
                       src={brand.logo}
                       alt={brand.name}
-                      className="max-h-24 max-w-full object-contain"
+                      className="max-h-24 max-w-full object-contain transition-transform group-hover:scale-105"
                     />
                   </div>
                   <CardHeader>
                     <div className="flex justify-between items-center mb-2">
-                      <CardTitle className="text-xl text-espaf-blue-dark">{brand.name}</CardTitle>
-                      <span className={`text-xs px-3 py-1 rounded-full ${
+                      <CardTitle className="text-xl text-espaf-blue-dark group-hover:text-espaf-blue-medium transition-colors">
+                        {brand.name}
+                      </CardTitle>
+                      <span className={`text-xs px-3 py-1 rounded-full transition-colors ${
                         brand.category === "Automatización" 
-                          ? "bg-espaf-blue-medium/10 text-espaf-blue-medium" 
+                          ? "bg-espaf-blue-medium/10 text-espaf-blue-medium group-hover:bg-espaf-blue-medium group-hover:text-white" 
                           : brand.category === "Filtración y Purificación"
-                          ? "bg-espaf-teal/10 text-espaf-teal"
-                          : "bg-espaf-yellow/10 text-espaf-blue-dark"
+                          ? "bg-espaf-teal/10 text-espaf-teal group-hover:bg-espaf-teal group-hover:text-white"
+                          : "bg-espaf-yellow/10 text-espaf-blue-dark group-hover:bg-espaf-yellow"
                       }`}>
                         {brand.category}
                       </span>
                     </div>
-                    <CardDescription>{brand.description}</CardDescription>
+                    <CardDescription className="group-hover:text-gray-700 transition-colors">
+                      {brand.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button variant="outline" className="w-full border-espaf-blue-medium text-espaf-blue-medium hover:bg-espaf-blue-medium hover:text-white">
-                      Ver productos
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-espaf-blue-medium text-espaf-blue-medium hover:bg-espaf-blue-medium hover:text-white transition-all"
+                    >
+                      Ver productos y detalles
                     </Button>
                   </CardContent>
                 </Card>
@@ -286,7 +310,6 @@ const Products = () => {
         </div>
       </section>
       
-      {/* Productos Destacados */}
       <section className="section-padding bg-espaf-blue-dark text-white">
         <div className="container-custom">
           <div className="text-center mb-12">
@@ -324,7 +347,6 @@ const Products = () => {
         </div>
       </section>
       
-      {/* CTA */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="bg-espaf-gray/20 rounded-lg p-8 md:p-12 text-center">
@@ -348,6 +370,13 @@ const Products = () => {
           </div>
         </div>
       </section>
+
+      {/* Modal de marca */}
+      <BrandModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        brand={selectedBrand}
+      />
     </div>
   );
 };
