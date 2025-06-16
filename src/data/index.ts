@@ -45,7 +45,7 @@ export const brands = [
   {
     id: 1,
     name: "Thermoval",
-    logo: "/lovable-uploads/cdddb49d-8b27-4fc3-a355-e4dd740b8c64.png",
+    logo: "/lovable-uploads/e32c8001-b7d0-4bcf-b763-371dfa766617.png",
     category: "Automatización",
     description: "Sistemas y componentes para control de temperatura y procesos térmicos industriales."
   },
