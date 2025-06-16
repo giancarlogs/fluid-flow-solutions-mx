@@ -1,4 +1,3 @@
-
 // Datos para el sitio web de Espaf Internacional
 
 // Datos de Industrias
@@ -46,44 +45,44 @@ export const brands = [
   {
     id: 1,
     name: "Thermoval",
-    logo: "/placeholder.svg",
+    logo: "/lovable-uploads/cdddb49d-8b27-4fc3-a355-e4dd740b8c64.png",
     category: "Automatización",
     description: "Sistemas y componentes para control de temperatura y procesos térmicos industriales."
   },
   {
     id: 2,
     name: "RPE",
-    logo: "/placeholder.svg",
+    logo: "/lovable-uploads/d8b02c10-493a-4582-998a-357ca09e2c5d.png",
     category: "Automatización",
     description: "Soluciones de control y automatización para procesos industriales."
   },
   {
     id: 3,
-    name: "CKD",
-    logo: "/placeholder.svg",
+    name: "Autovalve",
+    logo: "/lovable-uploads/d28e4c6e-f353-4aef-999f-c6d73a713ae9.png",
     category: "Automatización",
-    description: "Equipos y componentes para automatización industrial de alta precisión."
+    description: "Especialistas en automatización de válvulas para control de procesos industriales."
   },
   {
     id: 4,
     name: "Donaldson",
-    logo: "/placeholder.svg",
+    logo: "/lovable-uploads/c4a9c558-8ef5-43fc-9631-ab4cb27897f4.png",
     category: "Filtración y Purificación",
     description: "Sistemas de filtración industrial para líquidos y gases de alta calidad."
   },
   {
     id: 5,
-    name: "Eaton",
-    logo: "/placeholder.svg",
+    name: "Cobetter",
+    logo: "/lovable-uploads/40011bbe-4cb7-46b7-bdcf-4d3a06ac991b.png",
     category: "Filtración y Purificación",
-    description: "Soluciones de filtración avanzada para aplicaciones industriales exigentes."
+    description: "Soluciones avanzadas de filtración para aplicaciones farmacéuticas e industriales."
   },
   {
     id: 6,
-    name: "Parker",
-    logo: "/placeholder.svg",
-    category: "Ambos",
-    description: "Tecnologías de control y filtración para diversas aplicaciones industriales."
+    name: "Instapura",
+    logo: "/lovable-uploads/79040d9e-9179-4bbf-9cd5-457326f4ef68.png",
+    category: "Filtración y Purificación",
+    description: "Sistemas de purificación instantánea para agua y otros fluidos industriales."
   }
 ];
 

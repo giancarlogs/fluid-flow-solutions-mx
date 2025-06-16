@@ -66,15 +66,6 @@ const BrandModal = ({ isOpen, onClose, brand }: BrandModalProps) => {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-espaf-blue-dark to-slate-800 text-white border-espaf-teal">
         <DialogHeader className="relative">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="absolute right-0 top-0 text-white hover:bg-white/10"
-          >
-            <X className="h-4 w-4" />
-          </Button>
-          
           <div className="flex items-center gap-4 mb-4">
             <Badge className="bg-espaf-teal/20 text-espaf-teal border-espaf-teal">
               Soluciones Empresariales
