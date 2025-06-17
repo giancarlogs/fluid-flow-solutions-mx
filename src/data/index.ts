@@ -1,4 +1,3 @@
-
 // Datos para el sitio web de Espaf Internacional
 
 // Datos de Industrias
@@ -48,7 +47,7 @@ export const brands = [
     name: "Thermoval",
     logo: "/lovable-uploads/e32c8001-b7d0-4bcf-b763-371dfa766617.png",
     category: "Automatización",
-    description: "Sistemas y componentes para control de temperatura y procesos térmicos industriales."
+    description: "Empresa líder y el mayor fabricante en Brasil de válvulas solenoides 2, 3 y 4 vías para agua, vapor, aire, aceites y fluidos industriales."
   },
   {
     id: 2,
