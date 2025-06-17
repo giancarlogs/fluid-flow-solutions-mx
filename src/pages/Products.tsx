@@ -372,32 +372,44 @@ const Products = () => {
               Productos Destacados
             </h2>
             <p className="text-lg opacity-90 max-w-3xl mx-auto">
-              Conoce nuestros productos premium y más solicitados por nuestros clientes.
+              Válvulas Thermoval de alta tecnología para aplicaciones industriales especializadas.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden hover:bg-white/15 transition-colors">
-                <div className="aspect-video relative">
-                  <img 
-                    src="/placeholder.svg" 
-                    alt={`Producto destacado ${item}`} 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-espaf-yellow text-espaf-blue-dark text-xs font-medium px-2 py-1 rounded">Destacado</span>
-                  </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden hover:bg-white/15 transition-colors">
+              <div className="aspect-video relative">
+                <img 
+                  src="/lovable-uploads/51187d64-94b7-459f-8f54-829c721a1684.png" 
+                  alt="Válvulas Thermoval - Electroválvulas de alta tecnología" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-6 left-6">
+                  <span className="bg-espaf-yellow text-espaf-blue-dark text-sm font-bold px-4 py-2 rounded-lg shadow-lg">
+                    Thermoval - Premium
+                  </span>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Producto Premium {item}</h3>
-                  <p className="text-white/80 mb-4">Descripción breve del producto destacado y sus principales características.</p>
-                  <Button variant="outline" className="border-white text-white hover:bg-white hover:text-espaf-blue-dark">
-                    Ver Detalles
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Electroválvulas Thermoval</h3>
+                <p className="text-white/80 mb-6 text-lg leading-relaxed">
+                  Empresa Italiana fundada en 1972, líder Internacional en el diseño y fabricación de electroválvulas de alta tecnología, especialmente para fabricantes de equipo original. Válvulas de control de precisión para diversas aplicaciones industriales.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button 
+                    variant="outline" 
+                    className="border-white text-white hover:bg-white hover:text-espaf-blue-dark transition-all duration-300 hover:scale-105"
+                  >
+                    Ver Catálogo Completo
+                  </Button>
+                  <Button 
+                    className="bg-espaf-yellow hover:bg-espaf-yellow/90 text-espaf-blue-dark transition-all duration-300 hover:scale-105"
+                  >
+                    Solicitar Cotización
                   </Button>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
