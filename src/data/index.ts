@@ -54,7 +54,7 @@ export const brands = [
     name: "RPE",
     logo: "/lovable-uploads/d8b02c10-493a-4582-998a-357ca09e2c5d.png",
     category: "Automatización",
-    description: "Soluciones de control y automatización para procesos industriales."
+    description: "Empresa Italiana fundada en 1972 líder Internacional en el diseño y fabricación de electroválvulas de alta tecnología, especialmente para fabricantes de equipo original."
   },
   {
     id: 3,
