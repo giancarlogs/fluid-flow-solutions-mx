@@ -47,7 +47,7 @@ export const brands = [
     name: "Thermoval",
     logo: "/lovable-uploads/e32c8001-b7d0-4bcf-b763-371dfa766617.png",
     category: "Automatización",
-    description: "Empresa líder y el mayor fabricante en Brasil de válvulas solenoides 2, 3 y 4 vías para agua, vapor, aire, aceites y fluidos industriales."
+    description: "Empresa Italiana fundada en 1972 líder Internacional en el diseño y fabricación de electroválvulas de alta tecnología, especialmente para fabricantes de equipo original."
   },
   {
     id: 2,
