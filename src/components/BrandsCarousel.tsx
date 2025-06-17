@@ -82,11 +82,14 @@ const BrandsCarousel = () => {
                         onMouseEnter={() => setHoveredBrand(brand.id)}
                         onMouseLeave={() => setHoveredBrand(null)}
                       >
-                        <div className="bg-white rounded-lg p-4 shadow-md h-24 flex items-center justify-center transition-all duration-300 hover:shadow-lg">
+                        <div className="bg-white rounded-lg p-6 shadow-md h-28 flex items-center justify-center transition-all duration-300 hover:shadow-lg">
                           <img
                             src={brand.logo}
                             alt={brand.name}
-                            className="max-h-16 max-w-full object-contain"
+                            className="max-h-20 max-w-full object-contain filter brightness-100 contrast-100"
+                            style={{
+                              imageRendering: 'crisp-edges'
+                            }}
                           />
                         </div>
                         
