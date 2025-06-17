@@ -67,7 +67,7 @@ export const brands = [
   {
     id: 4,
     name: "Donaldson",
-    logo: "/lovable-uploads/92e25fec-d143-4498-bda4-507a4cf2e65e.png",
+    logo: "/lovable-uploads/cc2f03d9-835e-4b97-8e48-c4b30b6a44d0.png",
     category: "Filtración y Purificación",
     description: "Sistemas de filtración industrial para líquidos y gases de alta calidad."
   },
